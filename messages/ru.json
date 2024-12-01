@@ -3,17 +3,21 @@
         "title": "Главная страница",
         "about": "Go to the about page"
     },
-    "ToBasketButton": {
-        "text": "В корзину"
-    },
     "ProductCard": {
+        "locale" : "ru",
+        "article": "Артикул",
+        "weight": "Вес",
+        "volume": "Объем",
+        "desc": "Описание",
+        "amount" : "Кол-во в коробке",
         "brand": "Бренд",
         "barcode": "Штрихкод",
         "manufacturer": "Производитель",
         "productName": "ru",
         "popular": "Популярное",
         "type": "г",
-        "liquidType": "мл"
+        "liquidType": "мл",
+        "button": "В корзину"
     },
     "Header": {
         "address-1": "г. Кокчетав, ул. Ж. Ташенова 129Б",
@@ -133,5 +137,13 @@
     },
     "LocalSwitcher": {
         "locale": "Английский"
+    },
+    "Breadcrumbs": {
+        "HomePage": "Главная",
+        "Catalog": "Каталог"
+    },
+    "ProductPage":{
+        "headerPrimary": "Похожие ",
+        "headerSecondary":"Товары"
     }
 }
