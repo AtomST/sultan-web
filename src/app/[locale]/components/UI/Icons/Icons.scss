@@ -55,4 +55,28 @@
         height: 24px;
         background-image: url("/icon/share.svg");
     }
+
+    &--leftPointer {
+        width: 8px;
+        height: 16px;
+        background-image: url("/icon/leftPointer.svg");
+    }
+
+    &--rightPointer {
+        width: 8px;
+        height: 16px;
+        background-image: url("/icon/rightPointer.svg");
+    }
+
+    &--search {
+        width: 15px;
+        height: 15px;
+        background-image: url("/icon/search.svg");
+    }
+
+    &--recycle-bin {
+        width: 17px;
+        height: 19px;
+        background-image: url("/icon/recycle-bin.svg");
+    }
 }
