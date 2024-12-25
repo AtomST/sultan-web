@@ -55,4 +55,22 @@
         height: 24px;
         background-image: url("/icon/share.svg");
     }
+
+    &--leftPointer {
+        width: 8px;
+        height: 16px;
+        background-image: url("/icon/leftPointer.svg");
+    }
+
+    &--rightPointer {
+        width: 8px;
+        height: 16px;
+        background-image: url("/icon/rightPointer.svg");
+    }
+
+    &--delete {
+        width: 24px;
+        height: 24px;
+        background-image: url("/icon/delete.svg");
+    }
 }

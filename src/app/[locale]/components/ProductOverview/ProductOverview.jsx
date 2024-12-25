@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ShowProductSize } from "../ProductCard/ProductCard";
+import { useBasket } from "../../core/context/BasketContext";
 import Image from "next/image";
 import ButtonUI from "../UI/ButtonUI/ButtonUI";
 import Accordion from "../UI/Accordion/Accordion";
@@ -8,8 +9,9 @@ import "./ProductOverview.scss";
 
 const ProductOverview = ({ card }) => {
     const t = useTranslations("ProductCard");
-
-    const [quantity, setQuantity] = useState(1);
+    const { getQuantity, addToBasket } = useBasket();
+    const existingQuantity = getQuantity(card.id);
+    const [quantity, setQuantity] = useState(existingQuantity === 0 ? 1 : existingQuantity);
 
     // Проверка и установка значения в пределах допустимого диапазона
     const updateQuantity = (value) => {
@@ -25,7 +27,7 @@ const ProductOverview = ({ card }) => {
     const handleInputChange = (e) => {
         const value = e.target.value;
 
-        if (value === "") {
+        if (!value) {
             setQuantity("");
             return;
         }
@@ -38,7 +40,7 @@ const ProductOverview = ({ card }) => {
     };
 
     const handleBlur = () => {
-        if (quantity === "") {
+        if (!quantity) {
             setQuantity(1);
         }
     };
@@ -49,6 +51,10 @@ const ProductOverview = ({ card }) => {
 
     const handleDecrease = () => {
         setQuantity((prevQuantity) => updateQuantity(prevQuantity - 1));
+    };
+
+    const handleAddToCart = () => {
+        addToBasket(card, quantity);
     };
 
     return (
@@ -111,6 +117,7 @@ const ProductOverview = ({ card }) => {
                         size="sm"
                         label={t("button")}
                         className="product-overview__add-to-cart"
+                        onClick={handleAddToCart}
                     />
 
                     <ButtonUI

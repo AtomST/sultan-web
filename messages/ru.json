@@ -142,11 +142,21 @@
         "locale": "Английский"
     },
     "Breadcrumbs": {
+        "locale":"ru",
         "HomePage": "Главная",
         "Catalog": "Каталог"
     },
     "ProductPage": {
         "headerPrimary": "Похожие ",
         "headerSecondary": "Товары"
+    },
+    "CatalogPage": {
+        "locale": "ru",
+        "title": "Каталог"
+    },
+    "BasketPage": {
+        "title": "Корзина",
+        "order": "Оформить заказ",
+        "emptyBasket": "Ваша корзина пуста."
     }
 }
